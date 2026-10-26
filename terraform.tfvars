@@ -5,4 +5,4 @@ azs = ["us-east-1a", "us-east-1b", "us-east-1c"]
 ami = "ami-0c55b159cbfafe1f0"
 instance_type = "t3.micro"
 key_name = "shiva-key"
-private_ip = "10.90.1.15"
+private_ip = ["10.90.1.15","10.90.2.15"]
