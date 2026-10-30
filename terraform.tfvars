@@ -7,3 +7,4 @@ instance_type = "t3.micro"
 key_name = "shiva-key"
 private_ip = ["10.90.1.15","10.90.2.15"]
 privatesubnet_cidr_blocks = ["10.90.5.0/24","10.90.6.0/24","10.90.7.0/24"]
+private_ips = ["10.90.5.25","10.90.6.25","10.90.7.95"]
