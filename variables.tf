@@ -6,3 +6,5 @@ variable "ami" {  }
 variable "instance_type" {  }
 variable "key_name" {  }
 variable "private_ip" {  }
+variable "privatesubnet_cidr_blocks" { }
+
