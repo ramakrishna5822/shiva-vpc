@@ -1,9 +1,8 @@
 resource "aws_lb" "shiva-alb" {
-    count = 1
 name              = "shiva-alb"
 load_balancer_type = "application"
 security_groups = [aws_security_group.sg.id]
-subnets          = element(aws_subnet.public.*.id, count.index)
+subnets          = aws_subnet.public.*.id
 internal          = false
 tags = {
     Name = "${var.vpc_name}-alb"
@@ -37,8 +36,7 @@ resource "aws_lb_listener" "shiva-listener" {
 }
 
 resource "aws_lb_target_group_attachment" "shiva-tg-attachment" {
-    count=1
   target_group_arn = aws_lb_target_group.shiva-tg.arn
-  target_id        = element(aws_instance.shiva.*.id, 0)
+  target_id        = aws_instance.shiva.0.id
   port             = 80
 }
